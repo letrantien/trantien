@@ -1,0 +1,62 @@
+
+
+<h2>My favorite movies</h2>
+
+<div class="parent">
+
+  <ol class="movies">
+    <li class="itemsMovies"
+        *ngFor="let eachMovie of movies">
+        <a routerLink="/detail/{{eachMovie.id}}" style="text-decoration: none;">
+          {{eachMovie.name}} - {{eachMovie.releaseYear}}
+        </a>
+        <button class="xoa" class="btn btn-danger" title="delete movie"
+         (click)="delete(eachMovie.id)">X</button>
+    </li>
+  </ol>
+
+  <div class="addMovie" style="text-align: left; ">
+      <table>
+        <tr>
+          <td>New Movie's name: </td>
+          <td>
+            <input class="form-control" #movieName placeholder="name" />
+          </td>
+        </tr>
+        <tr>
+          <td>Release year: </td>
+          <td>
+            <input class="form-control" #releseYear placeholder="release year" />
+          </td>
+        </tr>
+      </table>
+
+      <button style="float: left" class="btn btn-danger" (click)="add(movieName.value, releseYear.value); movieName.value=''; releseYear.value=''">Add</button>
+    </div>
+  <!-- <app-movie-detail [movie]="movie"> </app-movie-detail> -->
+
+</div>
+
+
+
+<!-- <h1>
+  Movie Details
+</h1>
+<div>Id: <span>{{}}</span></div>
+<div>Name: <span></span></div>
+<div>Release year: <span></span></div>
+<h2>Edit your information:</h2>
+<div style="text-align: left; margin: 20px">
+  <label>
+    Movie name:
+    <input [ngModel]="movie.name" placeholder="Enter movie's name">
+  </label>
+</div>
+<div style="text-align: left; margin: 20px">
+  <label>
+    Release year:
+    <input [(ngModel)]="movie.releaseYear" placeholder="Enter Release year ">
+  </label>
+</div> -->
+
+

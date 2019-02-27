@@ -1,0 +1,15 @@
+a {
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+  border: 1px none black;
+  text-align: center;
+  border-radius: 10px;
+  background: mediumslateblue;
+  color: white
+}
+
+a:focus {
+  background: red;
+  color: mistyrose
+}
